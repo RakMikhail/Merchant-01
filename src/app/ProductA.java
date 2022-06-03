@@ -1,6 +1,6 @@
 package app;
 
-public class ProductA extends Product implements Sales{
+public class ProductA extends Product implements Sales {
 
     int qnty;
     double price;
@@ -14,6 +14,12 @@ public class ProductA extends Product implements Sales{
     @Override
     public double calcSales(int quota, double price) {
         return quota * price;
+    }
+
+    public String infoProduct() {
+        String name = getName();
+        String resultSale = Rounder.roundValue(calcSales(qnty, price));
+        return "Product: " + name + "\nSales (USD): " + resultSale;
     }
 
 
