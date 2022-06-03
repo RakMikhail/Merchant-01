@@ -8,4 +8,10 @@ public class MerchantA extends Merchant {
         super(name, phone);
         this.email = email;
     }
+
+    public String infoMerchant() {
+        String name = getName();
+        String phone = getPhone();
+        return "\nMerchant: " + name + ", " + phone + ", " + email + "\n";
+    }
 }
