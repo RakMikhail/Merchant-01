@@ -20,10 +20,6 @@ public class App {
     public static void main(String[] args) {
         doInputs();
         showData(processData());
-<<<<<<< HEAD
-
-=======
->>>>>>> developer
     }
 
     private static void doInputs() {
