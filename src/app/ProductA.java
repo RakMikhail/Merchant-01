@@ -16,5 +16,11 @@ public class ProductA extends Product implements Sales {
         return quota * price;
     }
 
+    public String infoProduct() {
+        String name = getName();
+        String resultSale = Rounder.roundValue(calcSales(qnty, price));
+        return "Product: " + name + "\nSales (USD): " + resultSale;
+    }
+
 
 }
