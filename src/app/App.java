@@ -16,8 +16,10 @@ public class App {
     static MerchantA merchantA;
     static String infoMerchant;
     static String infoProduct;
+
     public static void main(String[] args) {
         doInputs();
+        showData(processData());
     }
 
     private static void doInputs() {
@@ -39,12 +41,17 @@ public class App {
     }
 
     private static String processData() {
-        merchantA = new MerchantA(merchantName,merchantSurname, phone, email);
+        merchantA = new MerchantA(merchantName, merchantSurname, phone, email);
         infoMerchant = merchantA.infoMerchant();
         product = new ProductA(productName, quantity, price);
         infoProduct = product.infoProduct();
         double sales = product.calcSales(quantity, price);
         roundBonus = Rounder.roundValue(merchantA.calcBonus(sales));
         return infoMerchant + infoProduct + "\nBonus (USD): " + roundBonus;
+    }
+
+
+    private static void showData(String output) {
+        System.out.println(output);
     }
 }
