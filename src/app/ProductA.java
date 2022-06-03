@@ -1,6 +1,6 @@
 package app;
 
-public class ProductA extends Product {
+public class ProductA extends Product implements Sales {
 
     int qnty;
     double price;
@@ -10,5 +10,11 @@ public class ProductA extends Product {
         this.qnty = qnty;
         this.price = price;
     }
+
+    @Override
+    public double calcSales(int quota, double price) {
+        return quota * price;
+    }
+
 
 }
