@@ -9,4 +9,11 @@ public class MerchantA extends  Merchant {
         this.email = email;
     }
 
+    public String infoMerchant() {
+        String name = getName();
+        String surname = getSurname();
+        String phone = getPhone();
+        return "\nMerchant: " + name + " " + surname + ", " + phone + ", " + email + "\n";
+    }
+
 }
