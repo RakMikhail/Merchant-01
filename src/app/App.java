@@ -18,6 +18,7 @@ public class App {
 
     public static void main(String[] args) {
         doInputs();
+        showData(processData());
 
     }
 
@@ -45,5 +46,9 @@ public class App {
         double sales = product.calcSales(quantity, price);
         roundBonus = Rounder.roundValue(merchantA.calcBonus(sales));
         return infoMerchant + infoProduct + "\nBonus (USD): " + roundBonus;
+    }
+
+    private static void showData(String output) {
+        System.out.println(output);
     }
 }
